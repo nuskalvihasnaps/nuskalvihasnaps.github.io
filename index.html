@@ -9,14 +9,39 @@
 			background-position: center;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
 			align-items: center;
+			justify-content: center;
 			height: 100vh;
+		}
+		#playButton {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background-color: rgba(0,0,0,0.5);
+			cursor: pointer;
+		}
+		#playButton:hover {
+			background-color: rgba(0,0,0,0.7);
+		}
+		#playButton i {
+			font-size: 5rem;
 			color: white;
-			font-family: Arial, sans-serif;
-			font-size: 1.2rem;
-			line-height: 1.5;
-			text-align: center;
+		}
+		#content {
+			display: none;
+			animation: slide-up 1s ease-in-out;
+			animation-fill-mode: forwards;
+		}
+		@keyframes slide-up {
+			from {
+				transform: translateY(100%);
+			}
+			to {
+				transform: translateY(0%);
+			}
 		}
 		h1 {
 			font-size: 3rem;
@@ -28,11 +53,23 @@
 	</style>
 </head>
 <body>
-	<h1>Velkommen til den mystiske julefrokost</h1>
-	<p>I kan forberede jer på...</p>
-	<audio controls autoplay loop>
-		<source src="let-the-mystery-unfold-122118.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
+	<div id="playButton">
+		<i class="fa fa-play"></i>
+	</div>
+	<div id="content">
+		<h1>Velkommen til den mystiske julefrokost</h1>
+		<p>I kan forberede jer på...</p>
+		<audio controls autoplay loop>
+			<source src="let-the-mystery-unfold-122118.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+	</div>
+	<script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+	<script>
+		document.getElementById("playButton").addEventListener("click", function() {
+			document.getElementById("content").style.display = "block";
+			document.getElementById("playButton").style.display = "none";
+		});
+	</script>
 </body>
 </html>
