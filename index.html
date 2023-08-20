@@ -1,75 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>My Website</title>
-	<style>
-		body {
-			background-image: url("https://wallpapercrafter.com/desktop1/670258-Christmas-Santa-Claus-reindeer-halloween-spooky.jpg");
-			background-size: cover;
-			background-position: center;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-		}
-		#playButton {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 200px;
-			height: 200px;
-			border-radius: 50%;
-			background-color: rgba(0,0,0,0.5);
-			cursor: pointer;
-		}
-		#playButton:hover {
-			background-color: rgba(0,0,0,0.7);
-		}
-		#playButton i {
-			font-size: 5rem;
-			color: white;
-		}
-		#content {
-			display: none;
-			animation: slide-up 1s ease-in-out;
-			animation-fill-mode: forwards;
-		}
-		@keyframes slide-up {
-			from {
-				transform: translateY(100%);
-			}
-			to {
-				transform: translateY(0%);
-			}
-		}
-		h1 {
-			font-size: 3rem;
-			margin-bottom: 1rem;
-		}
-		p {
-			margin-bottom: 2rem;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    
+    .content {
+      text-align: center;
+      color: white;
+    }
+    
+    .big-heading {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+    .text {
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
-	<div id="playButton">
-		<i class="fa fa-play"></i>
-	</div>
-	<div id="content">
-		<h1>Velkommen til den mystiske julefrokost</h1>
-		<p>I kan forberede jer på...</p>
-		<audio controls autoplay loop>
-			<source src="let-the-mystery-unfold-122118.mp3" type="audio/mpeg">
-			Your browser does not support the audio element.
-		</audio>
-	</div>
-	<script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
-	<script>
-		document.getElementById("playButton").addEventListener("click", function() {
-			document.getElementById("content").style.display = "block";
-			document.getElementById("playButton").style.display = "none";
-		});
-	</script>
+  <div class="content">
+    <h1 class="big-heading">Welcome to My Website</h1>
+    <p class="text">This is a simple example of a vertically centered website with a background image.</p>
+  </div>
 </body>
 </html>
