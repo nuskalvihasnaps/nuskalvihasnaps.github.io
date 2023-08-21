@@ -67,6 +67,22 @@
       width: 100%;
       height: 100%;
     }
+
+    /* Snowflake animation */
+    .snowflake {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 50%;
+      animation: falling 5s linear infinite;
+    }
+
+    @keyframes falling {
+      to {
+        transform: translateY(100vh);
+      }
+    }
     
     /* Media query for smaller screens (phones) */
     @media screen and (max-width: 600px) {
@@ -81,6 +97,13 @@
   </style>
 </head>
 <body>
+  <div class="snow-container">
+    <div class="snowflake" style="left: 10%; animation-duration: 5s;"></div>
+    <div class="snowflake" style="left: 20%; animation-duration: 6s;"></div>
+    <div class="snowflake" style="left: 30%; animation-duration: 7s;"></div>
+    <!-- Add more snowflakes as needed -->
+  </div>
+
   <div class="container">
     <div class="content">
       <h1 class="big-heading">Tillykke du regnede den umulige gåde ud! 😂 </h1>
@@ -98,5 +121,22 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // Generate a random number between min and max
+    function random(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    // Create snowflakes dynamically and append them to the snow container
+    const snowContainer = document.querySelector(".snow-container");
+    for (let i = 0; i < 20; i++) {
+      const snowflake = document.createElement("div");
+      snowflake.className = "snowflake";
+      snowflake.style.left = `${random(0, 100)}%`;
+      snowflake.style.animationDuration = `${random(5, 10)}s`;
+      snowContainer.appendChild(snowflake);
+    }
+  </script>
 </body>
 </html>
