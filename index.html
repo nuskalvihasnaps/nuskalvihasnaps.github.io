@@ -1,143 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Årets Julefrokost</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url("https://c4.wallpaperflare.com/wallpaper/483/164/960/cozy-christmas-tree-decorations-holiday-wallpaper-preview.jpg") no-repeat center center fixed;
-      background-size: cover;
-      font-family: Comic Sans MS;
-      position: relative;
-      min-height: 100vh;
-    }
-    
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    .content {
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-    
-    .big-heading {
-      font-size: 24px;
-      margin-bottom: 10px;
-      margin-top: 10vh;
-    }
-    
-    .text {
-      font-size: 16px;
-      margin-top: 5vh;
-      max-width: 500px;
-    }
-    
-    /* YouTube video wrapper */
-    .video-wrapper {
-      position: relative;
-      padding-top: 56.25%; /* 16:9 aspect ratio (h/w * 100) */
-      max-width: 500px; /* Maximum width for the video player */
-      max-height: calc(500px * 0.5625); /* Maximum height for the video player */
-      margin: 5vh auto; /* Center the video player */
-      overflow: hidden; /* Hide any overflowing content */
-    }
-    
-    /* YouTube video player */
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      margin-left: 2vw; /* Add horizontal margin to the left */
-      margin-right: 2vw; /* Add horizontal margin to the right */
-    }
-
-    /* Snowflake animation */
-    .snowflake {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background-color: white;
-      border-radius: 50%;
-      animation: falling 5s linear infinite;
-    }
-
-    @keyframes falling {
-      to {
-        transform: translateY(100vh);
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Årets Julefrokost</title>
+    <style>
+      [un-cloak] {
+        display: none;
       }
-    }
-    
-    /* Media query for smaller screens (phones) */
-    @media screen and (max-width: 600px) {
-      .big-heading {
-        font-size: 20px;
-      }
-      
-      .text {
-        font-size: 14px;
-      }
-    }
-  </style>
-</head>
-<body>
-    <div class="snow-container">
-  <div class="snowflake" style="left: 10%; animation-duration: 5s;"></div>
-  <div class="snowflake" style="left: 20%; animation-duration: 6s;"></div>
-  <div class="snowflake" style="left: 30%; animation-duration: 7s;"></div>
-  <div class="snowflake" style="left: 40%; animation-duration: 5.5s;"></div>
-  <div class="snowflake" style="left: 50%; animation-duration: 6.5s;"></div>
-  <div class="snowflake" style="left: 60%; animation-duration: 7.5s;"></div>
-  <!-- Add more snowflakes as needed -->
-   <div class="snowflake" style="left: 15%; animation-duration: 6s;"></div>
-    <div class="snowflake" style="left: 25%; animation-duration: 5s;"></div>
-    <div class="snowflake" style="left: 35%; animation-duration: 6.5s;"></div>
-    <div class="snowflake" style="left: 45%; animation-duration: 7s;"></div>
-    <div class="snowflake" style="left: 55%; animation-duration: 5.5s;"></div>
-    <div class="snowflake" style="left: 65%; animation-duration: 6s;"></div>
-  </div>
-
-  <div class="container">
-    <div class="content">
-      <h1 class="big-heading">Tillykke du regnede den umulige gåde ud! 😂 </h1>
-      <p class="text">Sæt kryds i kalenderen d. 2 december og kridt skoene, 
-      når Kim og Tira byder ind til årets julefrokost. 
-      <br><br>Indbydelsen gør sig gældende for både dig og din partner,
-      Hvilket også ligger op til temaet, som blot er "2 ens",
-      altså det handler om at ligne din partner mest muligt.
-      <br><br>Hvis du/i ønsker at blive inviteret til begivenheden,
-      så smid en af os en besked på Messenger. </p>
-      
-      <!-- YouTube video wrapper -->
-      <div class="video-wrapper">
-        <iframe max-width="500px" max-height="100%" src="https://www.youtube.com/embed/kkKxVfTQC68" frameborder="0" allowfullscreen></iframe>
-      </div>
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind-compat.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+  </head>
+  <body
+    class="flex justify-center text-center text-white min-h-screen font-['Comic_Sans_MS'] bg-no-repeat bg-center bg-cover bg-[url(background.jpg)]"
+    un-cloak
+  >
+    <div
+      class="flex flex-col justify-center items-center min-w-full bg-black/50"
+    >
+      <main
+        class="my-8 flex flex-col gap-4 justify-center items-center max-w-screen-sm"
+      >
+        <h1 class="text-2xl">Tillykke du regnede den umulige gåde ud! 😂</h1>
+        <p>
+          Sæt kryds i kalenderen d. 2 december og kridt skoene, når Kim og Tira
+          byder ind til årets julefrokost.
+        </p>
+        <p>
+          Indbydelsen gør sig gældende for både dig og din partner, Hvilket også
+          ligger op til temaet, som blot er "2 ens", altså det handler om at
+          ligne din partner mest muligt.
+        </p>
+        <p>
+          Hvis du/i ønsker at blive inviteret til begivenheden, så smid en af os
+          en besked på Messenger.
+        </p>
+        <audio controls>
+          <source src="haps-haps-haps.wav" type="audio/wav" />
+        </audio>
+      </main>
     </div>
-  </div>
-
-  <script>
-    // Generate a random number between min and max
-    function random(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-
-    // Create snowflakes dynamically and append them to the snow container
-    const snowContainer = document.querySelector(".snow-container");
-    for (let i = 0; i < 20; i++) {
-      const snowflake = document.createElement("div");
-      snowflake.className = "snowflake";
-      snowflake.style.left = `${random(0, 100)}%`;
-      snowflake.style.animationDuration = `${random(5, 10)}s`;
-      snowContainer.appendChild(snowflake);
-    }
-  </script>
-</body>
+    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+    <script>
+      var sf = new Snowflakes({ color: "#ffffff" });
+    </script>
+  </body>
 </html>
